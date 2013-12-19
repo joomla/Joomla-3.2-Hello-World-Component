@@ -12,7 +12,7 @@
 	<copyright>Copyright Info</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>Description of the Hello World component ...</description>
 

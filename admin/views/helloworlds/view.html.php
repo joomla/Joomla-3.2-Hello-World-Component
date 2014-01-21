@@ -12,7 +12,10 @@ class HelloWorldViewHelloWorlds extends JViewLegacy
 {
 	/**
 	 * HelloWorlds view display method
-	 * @return void
+	 *
+	 * @param   string $tpl The name of the template file to parse; automatically searches through the template paths.
+	 *
+	 * @return  mixed  A string if successful, otherwise a JError object.
 	 */
 	function display($tpl = null)
 	{
@@ -31,7 +34,21 @@ class HelloWorldViewHelloWorlds extends JViewLegacy
 		$this->items      = $items;
 		$this->pagination = $pagination;
 
+		// Set the toolbar
+		$this->addToolBar();
+
 		// Display the template
 		parent::display($tpl);
+	}
+
+	/**
+	 * Setting the toolbar
+	 */
+	protected function addToolBar()
+	{
+		JToolBarHelper::title(JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLDS'));
+		JToolBarHelper::deleteList('', 'helloworlds.delete');
+		JToolBarHelper::editList('helloworld.edit');
+		JToolBarHelper::addNew('helloworld.add');
 	}
 }

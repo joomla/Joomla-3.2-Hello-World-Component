@@ -18,10 +18,10 @@ class HelloWorldModelHelloWorlds extends JModelList
 		// Create a new query object.
 		$db    = JFactory::getDBO();
 		$query = $db->getQuery(true);
-		// Select some fields
-		$query->select('id,greeting');
-		// From the hello table
-		$query->from('#__helloworld');
+		// Select some fields from the hello table
+		$query
+			->select('id,greeting')
+			->from('#__helloworld');
 
 		return $query;
 	}

@@ -43,9 +43,14 @@
 		<folder>language</folder>
 	</files>
 
+	<media destination="com_helloworld" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+
 	<administration>
 		<!-- Administration Menu Section -->
-		<menu>COM_HELLOWORLD_MENU</menu>
+		<menu img="../media/com_helloworld/images/tux-16x16.png">COM_HELLOWORLD_MENU</menu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
 				to copy FROM in the package to install therefore files copied

@@ -34,21 +34,38 @@ class HelloWorldViewHelloWorlds extends JViewLegacy
 		$this->items      = $items;
 		$this->pagination = $pagination;
 
-		// Set the toolbar
-		$this->addToolBar();
+		// Set the toolbar and number of found items
+		$this->addToolBar($this->pagination->total);
 
 		// Display the template
 		parent::display($tpl);
+
+		// Set the document
+		$this->setDocument();
 	}
 
 	/**
 	 * Setting the toolbar
 	 */
-	protected function addToolBar()
+	protected function addToolBar($total=null)
 	{
-		JToolBarHelper::title(JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLDS'));
+		JToolBarHelper::title(JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLDS') .
+			//Reflect number of items in title!
+			($total ? ' <span style="font-size: 0.75em; vertical-align: middle;">(' . $total . ')</span>' : '')
+			, 'helloworld');
 		JToolBarHelper::deleteList('', 'helloworlds.delete');
 		JToolBarHelper::editList('helloworld.edit');
 		JToolBarHelper::addNew('helloworld.add');
+	}
+
+	/**
+	 * Method to set up the document properties
+	 *
+	 * @return void
+	 */
+	protected function setDocument()
+	{
+		$document = JFactory::getDocument();
+		$document->setTitle(JText::_('COM_HELLOWORLD_ADMINISTRATION'));
 	}
 }

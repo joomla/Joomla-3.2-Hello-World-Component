@@ -10,7 +10,7 @@
 	<copyright>Copyright Info</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>0.0.9</version>
+	<version>0.0.10</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>COM_HELLOWORLD_DESCRIPTION</description>
 

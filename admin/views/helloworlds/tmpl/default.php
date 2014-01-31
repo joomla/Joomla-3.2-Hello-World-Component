@@ -1,8 +1,16 @@
 <?php
-// No direct access to this file
-defined('_JEXEC') or die('Restricted Access');
+/**
+ * @package     HelloWorld.Administrator
+ * @subpackage  com_helloworld
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
 
-// load tooltip behavior
+// No direct access to this file
+defined('_JEXEC') or die;
+
+// Load tooltip behavior
 JHtml::_('behavior.tooltip');
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_helloworld'); ?>" method="post" name="adminForm" id="adminForm">

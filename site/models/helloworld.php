@@ -1,12 +1,19 @@
 <?php
-// No direct access to this file
-defined('_JEXEC') or die('Restricted access');
+/**
+ * @package     HelloWorld.Administrator
+ * @subpackage  com_helloworld
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
 
-// import Joomla modelitem library
-jimport('joomla.application.component.modelitem');
+// No direct access to this file
+defined('_JEXEC') or die;
 
 /**
  * HelloWorld Model
+ *
+ * @since  0.0.1
  */
 class HelloWorldModelHelloWorld extends JModelItem
 {
@@ -16,13 +23,15 @@ class HelloWorldModelHelloWorld extends JModelItem
 	protected $messages;
 
 	/**
-	 * Returns a reference to the a Table object, always creating it.
+	 * Method to get a table object, load it if necessary.
 	 *
-	 * @param       type    The table type to instantiate
-	 * @param       string  A prefix for the table class name. Optional.
-	 * @param       array   Configuration array for model. Optional.
-	 * @return      JTable  A database object
-	 * @since       2.5
+	 * @param   string  $type    The table name. Optional.
+	 * @param   string  $prefix  The class prefix. Optional.
+	 * @param   array   $config  Configuration array for model. Optional.
+	 *
+	 * @return  JTable  A JTable object
+	 *
+	 * @since   1.6
 	 */
 	public function getTable($type = 'HelloWorld', $prefix = 'HelloWorldTable', $config = array())
 	{
@@ -31,8 +40,10 @@ class HelloWorldModelHelloWorld extends JModelItem
 
 	/**
 	 * Get the message
-	 * @param  int    The corresponding id of the message to be retrieved
-	 * @return string The message to be displayed to the user
+	 *
+	 * @param   integer  $id  Greeting Id
+	 *
+	 * @return  string        Fetched String from Table for relevant Id
 	 */
 	public function getMsg($id = 1)
 	{
@@ -43,7 +54,7 @@ class HelloWorldModelHelloWorld extends JModelItem
 
 		if (!isset($this->messages[$id]))
 		{
-			//request the selected id
+			// Request the selected id
 			$jinput = JFactory::getApplication()->input;
 			$id     = $jinput->get('id', 1, 'INT');
 

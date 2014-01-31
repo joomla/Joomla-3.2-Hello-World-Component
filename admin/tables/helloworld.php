@@ -1,19 +1,25 @@
 <?php
+/**
+ * @package     HelloWorld.Administrator
+ * @subpackage  com_helloworld
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
 // No direct access
-defined('_JEXEC') or die('Restricted access');
-
-// import Joomla table library
-jimport('joomla.database.table');
+defined('_JEXEC') or die;
 
 /**
  * Hello Table class
+ *
+ * @since  0.0.1
  */
 class HelloWorldTableHelloWorld extends JTable
 {
 	/**
 	 * Constructor
 	 *
-	 * @param object Database connector object
+	 * @param   JDatabaseDriver  &$db  A database connector object
 	 */
 	function __construct(&$db)
 	{

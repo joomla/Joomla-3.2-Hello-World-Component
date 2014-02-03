@@ -55,7 +55,7 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 		<tbody>
 			<?php if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $i => $row) :
-					$link = JRoute::_('index.php?option=com_helloworld&task=taxonomy.edit&id=' . $row->id);
+					$link = JRoute::_('index.php?option=com_helloworld&task=helloworld.edit&id=' . $row->id);
 				?>
 					<tr>
 						<td><?php echo $this->pagination->getRowOffset($i); ?></td>
@@ -63,7 +63,7 @@ $listDirn      = $this->escape($this->state->get('list.direction'));
 							<?php echo JHtml::_('grid.id', $i, $row->id); ?>
 						</td>
 						<td>
-							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_HELLOWORLD_EDIT_TAXONOMY'); ?>">
+							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_HELLOWORLD_EDIT_HELLOWORLD'); ?>">
 								<?php echo $row->greeting; ?>
 							</a>
 						</td>

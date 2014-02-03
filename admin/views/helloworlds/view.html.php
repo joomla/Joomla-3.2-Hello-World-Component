@@ -27,8 +27,11 @@ class HelloWorldViewHelloWorlds extends JViewLegacy
 	function display($tpl = null)
 	{
 		// Get data from the model
-		$items      = $this->get('Items');
-		$pagination = $this->get('Pagination');
+		$this->items		= $this->get('Items');
+		$this->pagination	= $this->get('Pagination');
+		$this->state		= $this->get('State');
+		$this->filterForm    = $this->get('FilterForm');
+		$this->activeFilters = $this->get('ActiveFilters');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -37,10 +40,6 @@ class HelloWorldViewHelloWorlds extends JViewLegacy
 
 			return false;
 		}
-
-		// Assign data to the view
-		$this->items      = $items;
-		$this->pagination = $pagination;
 
 		// Set the tool-bar and number of found items
 		$this->addToolBar();

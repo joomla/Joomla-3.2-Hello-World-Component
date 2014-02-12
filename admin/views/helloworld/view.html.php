@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     HelloWorld.Administrator
+ * @package     Joomla.Administrator
  * @subpackage  com_helloworld
  *
  * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.

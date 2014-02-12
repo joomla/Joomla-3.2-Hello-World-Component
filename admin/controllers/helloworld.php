@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     HelloWorld.Administrator
+ * @package     Joomla.Administrator
  * @subpackage  com_helloworld
  *
  * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
@@ -12,7 +12,9 @@ defined('_JEXEC') or die;
 /**
  * HelloWorld Controller
  *
- * @since  0.0.1
+ * @package     Joomla.Administrator
+ * @subpackage  com_helloworld
+ * @since       0.0.9
  */
 class HelloWorldControllerHelloWorld extends JControllerForm
 {

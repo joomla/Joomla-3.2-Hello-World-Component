@@ -1,14 +1,14 @@
 <?php
+/**
+ * @package     Joomla.Administrator
+ * @subpackage  com_helloworld
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
 // No direct access to this file
-defined('_JEXEC') or die('Restricted access');
-
-// Set some global property
-$document = JFactory::getDocument();
-$document->addStyleDeclaration('.icon-helloworld {background-image: url(' . JURI::root() . 'media/com_helloworld/images/tux-48x48.png);width: 48px;
-height: 48px;}');
-
-// import joomla controller library
-jimport('joomla.application.component.controller');
+defined('_JEXEC') or die;
 
 // Get an instance of the controller prefixed by HelloWorld
 $controller = JControllerLegacy::getInstance('HelloWorld');

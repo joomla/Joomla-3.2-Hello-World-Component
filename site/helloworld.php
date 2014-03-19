@@ -1,9 +1,14 @@
 <?php
-// No direct access to this file
-defined('_JEXEC') or die('Restricted access');
+/**
+ * @package     Joomla.Administrator
+ * @subpackage  com_helloworld
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
 
-// import joomla controller library
-jimport('joomla.application.component.controller');
+// No direct access to this file
+defined('_JEXEC') or die;
 
 // Get an instance of the controller prefixed by HelloWorld
 $controller = JControllerLegacy::getInstance('HelloWorld');

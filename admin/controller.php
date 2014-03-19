@@ -1,27 +1,29 @@
 <?php
-// No direct access to this file
-defined('_JEXEC') or die('Restricted access');
+/**
+ * @package     Joomla.Administrator
+ * @subpackage  com_helloworld
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
 
-// import Joomla controller library
-jimport('joomla.application.component.controller');
+// No direct access to this file
+defined('_JEXEC') or die;
 
 /**
  * General Controller of HelloWorld component
+ *
+ * @package     Joomla.Administrator
+ * @subpackage  com_helloworld
+ * @since       0.0.7
  */
 class HelloWorldController extends JControllerLegacy
 {
 	/**
-	 * display task
+	 * The default view for the display method.
 	 *
-	 * @return void
+	 * @var string
+	 * @since 12.2
 	 */
-	function display($cachable = false, $urlparams = false)
-	{
-		// set default view if not set
-		$input = JFactory::getApplication()->input;
-		$input->set('view', $input->getCmd('view', 'HelloWorlds'));
-
-		// call parent behavior
-		parent::display($cachable);
-	}
+	protected $default_view = 'helloworlds';
 }

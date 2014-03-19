@@ -40,8 +40,11 @@
 		<filename>controller.php</filename>
 		<folder>views</folder>
 		<folder>models</folder>
-		<folder>language</folder>
 	</files>
+
+	<languages folder="site/language">
+        <language tag="en-GB">en-GB/en-GB.com_helloworld.ini</language>
+    </languages>
 
 	<media destination="com_helloworld" folder="media">
 		<filename>index.html</filename>
@@ -68,11 +71,13 @@
 			<folder>models</folder>
 			<!-- views files section -->
 			<folder>views</folder>
-			<!-- admin languages files section -->
-			<folder>language</folder>
 			<!-- controllers files section -->
 			<folder>controllers</folder>
 		</files>
+		<languages folder="admin/language">
+            <language tag="en-GB">en-GB/en-GB.com_helloworld.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_helloworld.sys.ini</language>
+        </languages>
 	</administration>
 
 </extension>

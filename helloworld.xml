@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component"
-           version="2.5.0"
+           version="3.2.0"
            method="upgrade">
 
 	<name>Hello World!</name>
@@ -33,7 +33,7 @@
 
 	<administration>
 		<!-- Administration Menu Section -->
-		<menu>Hello World!</menu>
+		<menu link='index.php?option=com_helloworld'>Hello World!</menu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
 				to copy FROM in the package to install therefore files copied

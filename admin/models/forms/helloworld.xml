@@ -8,8 +8,8 @@
 		<field
 				name="greeting"
 				type="text"
-				label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
-				description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
+				label="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_LABEL"
+				description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
 				size="40"
 				class="inputbox"
 				default=""

@@ -2,9 +2,6 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
-// import Joomla modelitem library
-jimport('joomla.application.component.modelitem');
-
 /**
  * HelloWorld Model
  */
@@ -23,6 +20,7 @@ class HelloWorldModelHelloWorld extends JModelItem
 	{
 		if (!isset($this->msg))
 		{
+
 			$jinput = JFactory::getApplication()->input;
 			$id     = $jinput->get('id', 1, 'INT');
 
@@ -37,7 +35,6 @@ class HelloWorldModelHelloWorld extends JModelItem
 					break;
 			}
 		}
-
 		return $this->msg;
 	}
 }

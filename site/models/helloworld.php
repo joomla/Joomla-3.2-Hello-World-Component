@@ -30,8 +30,8 @@ class HelloWorldModelHelloWorld extends JModelItem
 	}
 	/**
 	 * Get the message
-	 * @param  int    The corresponding id of the message to be retrieved
-	 * @return string The message to be displayed to the user
+	 * @param  int		The corresponding id of the message to be retrieved
+	 * @return string	The message to be displayed to the user
 	 */
 	public function getMsg($id = 1)
 	{

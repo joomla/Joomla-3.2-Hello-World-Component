@@ -12,13 +12,11 @@ class HelloWorldControllerHelloWorlds extends JControllerAdmin
 {
 	/**
 	 * Proxy for getModel.
-	 *
-	 * @since       2.5
+	 * @since	2.5
 	 */
 	public function getModel($name = 'HelloWorld', $prefix = 'HelloWorldModel')
 	{
 		$model = parent::getModel($name, $prefix, array('ignore_request' => true));
-
 		return $model;
 	}
 }

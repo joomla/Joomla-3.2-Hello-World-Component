@@ -11,17 +11,17 @@ class HelloWorldModelHelloWorlds extends JModelList
 	/**
 	 * Method to build an SQL query to load the list data.
 	 *
-	 * @return      string  An SQL query
+	 * @return	string	An SQL query
 	 */
 	protected function getListQuery()
 	{
-		// Create a new query object.
-		$db    = JFactory::getDBO();
+		// Create a new query object.		
+		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
-		// Select some fields
-		$query->select('id,greeting');
-		// From the hello table
-		$query->from('#__helloworld');
+		// Select some fields from the hello table
+		$query
+			->select('id,greeting')
+			->from('#__helloworld');
 
 		return $query;
 	}

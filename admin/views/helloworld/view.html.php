@@ -12,7 +12,6 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 {
 	/**
 	 * display method of Hello view
-	 *
 	 * @return void
 	 */
 	public function display($tpl = null)
@@ -25,7 +24,6 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 		if (count($errors = $this->get('Errors')))
 		{
 			JError::raiseError(500, implode('<br />', $errors));
-
 			return false;
 		}
 		// Assign the Data
@@ -47,7 +45,8 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 		$input = JFactory::getApplication()->input;
 		$input->set('hidemainmenu', true);
 		$isNew = ($this->item->id == 0);
-		JToolBarHelper::title($isNew ? JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLD_NEW') : JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLD_EDIT'));
+		JToolBarHelper::title($isNew ? JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLD_NEW') :
+		JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLD_EDIT'));
 		JToolBarHelper::save('helloworld.save');
 		JToolBarHelper::cancel('helloworld.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
 	}

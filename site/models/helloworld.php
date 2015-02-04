@@ -22,7 +22,7 @@ class HelloWorldModelHelloWorld extends JModelItem
 		{
 
 			$jinput = JFactory::getApplication()->input;
-			$id     = $jinput->get('id', 1, 'INT');
+			$id = $jinput->get('id', 1, 'INT');
 
 			switch ($id)
 			{

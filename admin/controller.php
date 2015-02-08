@@ -1,24 +1,29 @@
 <?php
+/**
+ * @package     Joomla.Administrator
+ * @subpackage  com_helloworld
+ *
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
 /**
  * General Controller of HelloWorld component
+ *
+ * @package     Joomla.Administrator
+ * @subpackage  com_helloworld
+ * @since       0.0.7
  */
 class HelloWorldController extends JControllerLegacy
 {
 	/**
-	 * display task
+	 * The default view for the display method.
 	 *
-	 * @return void
+	 * @var string
+	 * @since 12.2
 	 */
-	function display($cachable = false, $urlparams = false)
-	{
-		// set default view if not set
-		$input = JFactory::getApplication()->input;
-		$input->set('view', $input->getCmd('view', 'HelloWorlds'));
-
-		// call parent behavior
-		parent::display($cachable);
-	}
+	protected $default_view = 'helloworlds';
 }

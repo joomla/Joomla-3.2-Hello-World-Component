@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="component" version="3.2" method="upgrade">
+<extension type="component" version="3.2.0" method="upgrade">
 
 	<name>COM_HELLOWORLD</name>
 	<!-- The following elements are optional and free of formatting constraints -->
@@ -40,8 +40,11 @@
 		<filename>controller.php</filename>
 		<folder>views</folder>
 		<folder>models</folder>
-		<folder>language</folder>
 	</files>
+
+        <languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_helloworld.ini</language>
+        </languages>
 
 	<administration>
 		<!-- Administration Menu Section -->
@@ -63,11 +66,13 @@
 			<folder>models</folder>
 			<!-- views files section -->
 			<folder>views</folder>
-			<!-- admin languages files section -->
-			<folder>language</folder>
 			<!-- controllers files section -->
 			<folder>controllers</folder>
 		</files>
+		<languages folder="admin/language">
+        		<language tag="en-GB">en-GB/en-GB.com_helloworld.ini</language>
+                        <language tag="en-GB">en-GB/en-GB.com_helloworld.sys.ini</language>
+		</languages>
 	</administration>
 
 </extension>

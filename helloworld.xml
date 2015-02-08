@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="component"
-           version="2.5.0"
-           method="upgrade">
+<extension type="component" version="3.2.0" method="upgrade">
 
 	<name>Hello World!</name>
 	<!-- The following elements are optional and free of formatting constraints -->
-	<creationDate>November 2009</creationDate>
+	<creationDate>January 2014</creationDate>
 	<author>John Doe</author>
 	<authorEmail>john.doe@example.org</authorEmail>
 	<authorUrl>http://www.example.org</authorUrl>
@@ -16,7 +14,7 @@
 	<!-- The description is optional and defaults to the name -->
 	<description>Description of the Hello World component ...</description>
 
-	<update> <!-- Runs on update; New in 2.5 -->
+	<update> <!-- Runs on update; New since J2.5 -->
 		<schemas>
 			<schemapath type="mysql">sql/updates/mysql</schemapath>
 		</schemas>
@@ -24,8 +22,8 @@
 
 	<!-- Site Main File Copy Section -->
 	<!-- Note the folder attribute: This attribute describes the folder
-			to copy FROM in the package to install therefore files copied
-			in this section are copied from /site/ in the package -->
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
 	<files folder="site">
 		<filename>index.html</filename>
 		<filename>helloworld.php</filename>
@@ -36,11 +34,11 @@
 
 	<administration>
 		<!-- Administration Menu Section -->
-		<menu>Hello World!</menu>
+		<menu link='index.php?option=com_helloworld'>Hello World!</menu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
-				to copy FROM in the package to install therefore files copied
-				in this section are copied from /admin/ in the package -->
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
 		<files folder="admin">
 			<!-- Admin Main File Copy Section -->
 			<filename>index.html</filename>

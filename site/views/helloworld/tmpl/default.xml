@@ -10,11 +10,10 @@
 					type="list"
 					label="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_LABEL"
 					description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
-					default="1"
-					>
-				<option value="1">Hello World!</option>
-				<option value="2">Good bye World!</option>
-			</field>
+					default="1">
+                                <option value="1">Hello World!</option>
+                                <option value="2">Good bye World!</option>
+                        </field>
 		</fieldset>
 	</fields>
 </metadata>

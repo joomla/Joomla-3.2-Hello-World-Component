@@ -55,8 +55,8 @@ class HelloWorldViewHelloWorlds extends JViewLegacy
 	protected function addToolBar()
 	{
 		JToolBarHelper::title(JText::_('COM_HELLOWORLD_MANAGER_HELLOWORLDS'));
-		JToolBarHelper::deleteList('', 'helloworlds.delete');
-		JToolBarHelper::editList('helloworld.edit');
 		JToolBarHelper::addNew('helloworld.add');
+		JToolBarHelper::editList('helloworld.edit');
+		JToolBarHelper::deleteList('', 'helloworlds.delete');
 	}
 }

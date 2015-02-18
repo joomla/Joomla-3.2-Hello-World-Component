@@ -24,7 +24,7 @@
 			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
 		</sql>
 	</uninstall>
-	<update> <!-- Runs on update; New in 2.5 -->
+	<update> <!-- Runs on update; New since J2.5 -->
 		<schemas>
 			<schemapath type="mysql">sql/updates/mysql</schemapath>
 		</schemas>
@@ -32,24 +32,27 @@
 
 	<!-- Site Main File Copy Section -->
 	<!-- Note the folder attribute: This attribute describes the folder
-			to copy FROM in the package to install therefore files copied
-			in this section are copied from /site/ in the package -->
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
 	<files folder="site">
 		<filename>index.html</filename>
 		<filename>helloworld.php</filename>
 		<filename>controller.php</filename>
 		<folder>views</folder>
 		<folder>models</folder>
-		<folder>language</folder>
 	</files>
+
+        <languages folder="site/language">
+		<language tag="en-GB">en-GB/en-GB.com_helloworld.ini</language>
+        </languages>
 
 	<administration>
 		<!-- Administration Menu Section -->
-		<menu>COM_HELLOWORLD_MENU</menu>
+		<menu link='index.php?option=com_helloworld'>COM_HELLOWORLD_MENU</menu>
 		<!-- Administration Main File Copy Section -->
 		<!-- Note the folder attribute: This attribute describes the folder
-				to copy FROM in the package to install therefore files copied
-				in this section are copied from /admin/ in the package -->
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
 		<files folder="admin">
 			<!-- Admin Main File Copy Section -->
 			<filename>index.html</filename>
@@ -63,9 +66,11 @@
 			<folder>models</folder>
 			<!-- views files section -->
 			<folder>views</folder>
-			<!-- admin languages files section -->
-			<folder>language</folder>
 		</files>
+		<languages folder="admin/language">
+        		<language tag="en-GB">en-GB/en-GB.com_helloworld.ini</language>
+                        <language tag="en-GB">en-GB/en-GB.com_helloworld.sys.ini</language>
+		</languages>
 	</administration>
 
 </extension>

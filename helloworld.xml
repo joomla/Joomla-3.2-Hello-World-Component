@@ -12,7 +12,7 @@
 	<copyright>Copyright Info</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>Description of the Hello World component ...</description>
 
@@ -29,6 +29,8 @@
 	<files folder="site">
 		<filename>index.html</filename>
 		<filename>helloworld.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
 	</files>
 
 	<administration>

@@ -12,10 +12,20 @@
 	<copyright>Copyright Info</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>0.0.1</version>
+	<version>0.0.6</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>Description of the Hello World component ...</description>
 
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
 	<update> <!-- Runs on update; New in 2.5 -->
 		<schemas>
 			<schemapath type="mysql">sql/updates/mysql</schemapath>
@@ -29,6 +39,9 @@
 	<files folder="site">
 		<filename>index.html</filename>
 		<filename>helloworld.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
 	</files>
 
 	<administration>
@@ -44,6 +57,10 @@
 			<filename>helloworld.php</filename>
 			<!-- SQL files section -->
 			<folder>sql</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- models files section -->
+			<folder>models</folder>
 		</files>
 	</administration>
 

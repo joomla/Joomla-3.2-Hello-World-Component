@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+				addrulepath="/administrator/components/com_helloworld/models/rules"
+>
+	<fieldset>
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="greeting"
+				type="text"
+				label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
+				description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
+				size="40"
+				class="inputbox validate-greeting"
+				validate="greeting"
+				required="true"
+				default=""
+				/>
+		<field
+				name="catid"
+				type="category"
+				extension="com_helloworld"
+				class="inputbox"
+				default=""
+				label="COM_HELLOWORLD_HELLOWORLD_FIELD_CATID_LABEL"
+				description="COM_HELLOWORLD_HELLOWORLD_FIELD_CATID_DESC"
+				required="true"
+		>
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+	</fieldset>
+</form>
